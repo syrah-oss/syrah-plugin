@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Syrah">
+  <defs>
+    <mask id="cut">
+      <path fill="#fff" d="M16 3.8 28.2 16 16 28.2 3.8 16Z"/>
+      <path fill="#000" d="M22.54 10.74 18.04 15.24 16.76 13.96 21.26 9.46Z"/>
+      <path fill="#000" d="M16 13.8 18.2 16 16 18.2 13.8 16Z"/>
+    </mask>
+  </defs>
+  <path fill="#c94f6d" mask="url(#cut)" d="M16 3.8 28.2 16 16 28.2 3.8 16Z"/>
+</svg>

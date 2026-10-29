@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "syrah",
+  "version": "0.1.0",
+  "description": "Agent skills for security engineering, packaged for Claude Code and Codex.",
+  "author": {
+    "name": "Syrah",
+    "email": "security@syrah.dev",
+    "url": "https://syrah.dev"
+  },
+  "homepage": "https://syrah.dev",
+  "repository": "https://github.com/syrah-oss/syrah-plugin",
+  "license": "MIT",
+  "keywords": ["security", "networking", "vpn", "mullvad", "egress", "osint"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Syrah",
+        "shortDescription": "Agent skills from Syrah",
+        "developerName": "Syrah",
+        "category": "Developer Tools",
+        "websiteURL": "https://syrah.dev"
+      }
+    }
+  }
+}

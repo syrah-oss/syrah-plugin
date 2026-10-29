@@ -1,0 +1,111 @@
+/* Additions for the syrah-plugin landing page.
+   Loaded after the shared syrah.dev site.css; overrides nothing. */
+
+.starbar {
+  background: linear-gradient(90deg, rgba(201, 79, 109, 0.16), rgba(201, 79, 109, 0.04));
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+.starbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 40px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.starbar .star {
+  color: var(--accent);
+  font-size: 14px;
+}
+.starbar a {
+  color: var(--accent-text);
+  border-bottom: 1px solid transparent;
+}
+.starbar a:hover {
+  color: #fff;
+  border-bottom-color: var(--accent);
+}
+
+.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 980px) {
+  .cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* command blocks */
+.code {
+  position: relative;
+  margin: var(--s-3) 0 0;
+  padding: 14px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: #ccd4e3;
+}
+.code code {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.code .c {
+  color: var(--dim);
+}
+.code .p {
+  color: var(--accent-text);
+}
+
+.copy {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-xs);
+  background: var(--panel);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.code:hover .copy,
+.copy:focus-visible {
+  opacity: 1;
+}
+.copy:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+
+.panel .code {
+  font-size: 11.5px;
+}
+
+.panel .small {
+  margin-bottom: 0;
+}
+
+.skill-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-text);
+}

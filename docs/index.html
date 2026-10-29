@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syrah Plugin — agent skills and MCP servers, given back</title>
+    <meta
+      name="description"
+      content="Agent skills and MCP servers from Syrah, built on open community work and released under MIT for Claude Code, Codex and OpenCode."
+    />
+    <meta name="theme-color" content="#0b0d12" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Syrah" />
+    <meta property="og:title" content="Syrah Plugin" />
+    <meta
+      property="og:description"
+      content="Agent skills and MCP servers from Syrah, built on open community work and released under MIT."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/syrah-mark.svg" />
+    <link
+      rel="preload"
+      href="assets/fonts/instrument-serif-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/instrument-sans-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/plugins.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="starbar">
+      <div class="container">
+        <span class="star" aria-hidden="true">★</span>
+        <span>If this saves you time, star it on GitHub.</span>
+        <a href="https://github.com/syrah-oss/syrah-plugin">Give us a star →</a>
+      </div>
+    </div>
+
+    <header class="site-head">
+      <div class="container head-inner">
+        <a class="brand" href="#main" aria-label="Syrah Plugin, home">
+          <img
+            class="brand-mark"
+            src="assets/img/syrah-mark.svg"
+            alt=""
+            width="30"
+            height="30"
+          />
+          <span>Syrah</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="https://syrah.dev">syrah.dev</a>
+          <a href="https://github.com/syrah-oss/syrah-plugin">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-copy">
+            <span class="eyebrow">Open source</span>
+            <h1>What we build, given back.</h1>
+            <p class="lede">
+              Agent skills and MCP servers from our own engagements. Built on open work from the
+              community, released under MIT, so the next person starts further ahead than we did.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/syrah-oss/syrah-plugin"
+                >★ Star on GitHub</a
+              >
+              <a class="btn btn-secondary" href="#install">Install</a>
+            </div>
+            <div class="hero-meta">
+              <span>Skills</span>
+              <span>MCP servers</span>
+              <span>Claude Code</span>
+              <span>Codex</span>
+              <span>OpenCode</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="install">
+        <div class="container">
+          <span class="eyebrow">Install</span>
+          <div class="between">
+            <h2 class="mb-0">Pick your host.</h2>
+            <span class="badge">MIT</span>
+          </div>
+          <p class="lede mt-4">
+            One plugin named <span class="skill-name">syrah</span> carries the skills and their
+            MCP servers together. Install it once; new work arrives with the next update.
+          </p>
+
+          <div class="grid cols-3 mt-6">
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Claude Code</h2>
+                <span class="badge">plugin</span>
+              </div>
+              <p class="small muted">Marketplace, then plugin.</p>
+              <pre class="code"><code><span class="p">$</span> claude plugin marketplace add syrah-oss/syrah-plugin
+<span class="p">$</span> claude plugin install syrah@syrah-plugin</code></pre>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h2>Codex</h2>
+                <span class="badge">plugin</span>
+              </div>
+              <p class="small muted">Marketplace, then enable it.</p>
+              <pre class="code"><code><span class="p">$</span> codex plugin marketplace add syrah-oss/syrah-plugin</code></pre>
+              <p class="small muted mt-4">
+                Enable in <span class="skill-name">~/.codex/config.toml</span>, or from the Plugins
+                Directory.
+              </p>
+              <pre class="code"><code>[plugins."syrah@syrah-plugin"]
+enabled = true</code></pre>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h2>OpenCode</h2>
+                <span class="badge">skills</span>
+              </div>
+              <p class="small muted">Skills directory, from a clone.</p>
+              <pre class="code"><code><span class="c"># user level</span>
+<span class="p">$</span> for s in "$PWD"/skills/*/; do mkdir -p ~/.config/opencode/skills &amp;&amp; ln -sfn "$s" ~/.config/opencode/skills/"$(basename "$s")"; done</code></pre>
+              <p class="small muted mt-4">
+                Project level works the same way, into <span class="skill-name">.opencode/skills</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="community">
+        <div class="container">
+          <span class="eyebrow">Community</span>
+          <div class="between">
+            <h2 class="mb-0">Built on the community. Given back to it.</h2>
+          </div>
+          <p class="lede mt-4">
+            None of this starts from zero. It is built on open specifications, open skills and
+            people who publish their work instead of keeping it internal. We add what our own
+            engagements taught us and put it back out the same way — permissive licence, readable
+            history, no paid tier.
+          </p>
+
+          <div class="grid cols-2 mt-6">
+            <div class="panel">
+              <div class="panel-head">
+                <h3 class="mb-0">Why we publish</h3>
+                <span class="badge">MIT</span>
+              </div>
+              <p class="small muted">
+                The tools are only worth anything if they are used. Anything that stands on its own
+                after an engagement is released here rather than left in a private repo.
+              </p>
+              <ul class="list-plain mt-4">
+                <li><span class="mark">—</span><span>Same code we run ourselves</span></li>
+                <li><span class="mark">—</span><span>Permissive licence, no upsell</span></li>
+                <li><span class="mark">—</span><span>Documentation that says what it does not do</span></li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head">
+                <h3 class="mb-0">Contribute</h3>
+                <span class="badge">open</span>
+              </div>
+              <p class="small muted">
+                Issues, patches and new work are welcome — a skill that saved you a day is worth
+                more to the next person than a bug report about it.
+              </p>
+              <div class="foot-links mt-4">
+                <a class="accent" href="https://github.com/syrah-oss/syrah-plugin">github.com/syrah-oss/syrah-plugin</a>
+                <a class="accent" href="https://github.com/syrah-oss/syrah-plugin/issues">Issues and pull requests</a>
+                <a class="accent" href="mailto:security@syrah.dev">security@syrah.dev</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <div class="container">
+        <div class="foot-grid two">
+          <div>
+            <a class="brand" href="#main" aria-label="Syrah Plugin, home">
+              <img
+                class="brand-mark"
+                src="assets/img/syrah-mark.svg"
+                alt=""
+                width="30"
+                height="30"
+              />
+              <span>Syrah</span>
+            </a>
+            <p class="foot-note">
+              Open source from Syrah, an independent security studio in Belgium. Built on the
+              community, given back to it.
+            </p>
+          </div>
+          <div>
+            <h4>Syrah</h4>
+            <div class="foot-links">
+              <a href="https://syrah.dev">syrah.dev</a>
+              <a href="https://github.com/syrah-oss/syrah-plugin">GitHub repository</a>
+              <a href="mailto:security@syrah.dev">security@syrah.dev</a>
+            </div>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span>&copy; 2026 Syrah</span>
+          <span class="nowrap">Independent security studio &middot; Belgium</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "syrah-plugin",
+  "owner": {
+    "name": "Syrah",
+    "email": "security@syrah.dev",
+    "url": "https://syrah.dev"
+  },
+  "metadata": {
+    "description": "Agent skills from Syrah, for Claude Code and Codex."
+  },
+  "plugins": [
+    {
+      "name": "syrah",
+      "source": "./",
+      "description": "Agent skills for security engineering.",
+      "category": "security"
+    }
+  ]
+}
